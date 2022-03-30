@@ -16,7 +16,3 @@ function App() {
 
 export default App;
 
-/*      <Route path="/" element={<TelaInicial />}></Route>
-        <Route path="/sessoes/:filmeId" element={<Filme />}></Route>
-        <Route path="/assentos/:sessaoId" element={<Sessao />}></Route>
-        <Route path="/sucesso" element={<Sucesso />}></Route>*/
