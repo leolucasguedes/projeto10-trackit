@@ -1,4 +1,5 @@
 import Header from "./../../components/Header";
+import Footer from "../../components/Footer";
 
 import { Main, DivButton, DivTexto } from "./style.js";
 
@@ -18,6 +19,7 @@ function TelaHabitos() {
           </p>
         </DivTexto>
       </Main>
+      <Footer />
     </>
   );
 }

@@ -1,4 +1,5 @@
 import Header from "./../../components/Header";
+import Footer from "../../components/Footer";
 
 import { Main, DivCima, DivTexto } from "./style.js";
 
@@ -14,6 +15,7 @@ function TelaHistorico() {
           <p>Em breve você poderá ver o histórico dos seus hábitos aqui!</p>
         </DivTexto>
       </Main>
+      <Footer />
     </>
   );
 }

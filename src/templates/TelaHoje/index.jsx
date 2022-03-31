@@ -1,4 +1,5 @@
 import Header from "./../../components/Header";
+import Footer from "../../components/Footer";
 
 import { Main, DivCima, DivTarefas } from "./style.js";
 
@@ -13,6 +14,7 @@ function TelaHoje() {
         </DivCima>
         <DivTarefas></DivTarefas>
       </Main>
+      <Footer />
     </>
   );
 }
