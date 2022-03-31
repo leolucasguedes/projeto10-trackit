@@ -20,7 +20,7 @@ const Topo = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 4 4 0 #000000 15%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   position: fixed;
   top: 0;
   right: 0;
