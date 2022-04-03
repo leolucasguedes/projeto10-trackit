@@ -1,16 +1,21 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+
+import UsuarioContext from "../../Api/UsuarioContext.js";
 
 import { Main, DivLogo, DivTexto, DivInputs, Input, Entrar } from "./style.js";
 
 import Logo from "./../../assets/images/logo-trackit.png";
+
 
 function TelaInicial({ salvarToken }) {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
 
   const navigate = useNavigate();
+
+  //const { setDados } = useContext(UsuarioContext)
 
   function login() {
     const URL =
@@ -21,8 +26,9 @@ function TelaInicial({ salvarToken }) {
     });
     promise.then((response) => {
       const { data } = response;
-      console.log(data);
+      //console.log(data);
       salvarToken(data.token);
+      //setDados({ email, password })
       navigate("/habitos");
     });
   }
