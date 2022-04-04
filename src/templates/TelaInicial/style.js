@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Main = styled.main`
   width: 375px;
   height: 810px;
+  background-color: #FFFFFF;
 `;
 
 export const DivLogo = styled.div`

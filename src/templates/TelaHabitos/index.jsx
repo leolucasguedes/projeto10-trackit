@@ -15,7 +15,9 @@ function TelaHabitos({ token }) {
   const [etapa, setEtapa] = useState(0);
   const [habito, setHabito] = useState([]);
 
-  const { habitosUsuario, setHabitosUsuario } = useContext(HabitosUsuarioContext);
+  const { habitosUsuario, setHabitosUsuario } = useContext(
+    HabitosUsuarioContext
+  );
 
   useEffect(() => buscaHabitos(), []);
 

@@ -44,7 +44,7 @@ function TelaInicial({ salvarToken }) {
       
       salvarToken(data.token);
 
-      navigate("/habitos");
+      navigate("/hoje");
       setCarregando(false);
     });
     promise.catch(({ response }) => {

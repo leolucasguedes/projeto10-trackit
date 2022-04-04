@@ -10,7 +10,7 @@ import {
 } from "./style.js";
 
 //import { ThreeDots } from "react-loader-spinner";
-import HabitosUsuarioContext from '../../context/HabitosContext';
+import HabitosUsuarioContext from "../../context/HabitosContext";
 
 function CriadorHabito(props) {
   const { etapa, setEtapa } = props;
@@ -31,23 +31,25 @@ function CriadorHabito(props) {
     { id: 6, name: "S", isSelected: false },
   ];
 
-  const {habitosUsuario, setHabitosUsuario} = useContext(HabitosUsuarioContext)
-  const [selectedDay, setSelectedDay] = useState(dias);
+  const { habitosUsuario, setHabitosUsuario } = useContext(
+    HabitosUsuarioContext
+  );
+  const [diaSelecionado, setDiaSelecionado] = useState(dias);
 
   function selectDay(id) {
-    const selectedDays = selectedDay.map((dia) => {
+    const Selecionados = diaSelecionado.map((dia) => {
       if (dia.id === id) {
         dia.isSelected = !dia.isSelected;
       }
       return dia;
     });
-    setSelectedDay([...selectedDays]);
+    setDiaSelecionado([...diaSelecionado]);
 
-    const DataDias = selectedDay.filter((dia) => dia.isSelected === true);
+    const DataDias = diaSelecionado.filter((dia) => dia.isSelected === true);
     //console.log(DataDias);
-    const selectedDaysId = DataDias.map((dia) => dia.id);
-    //console.log(selectedDaysId);
-    setFrequencia([...selectedDaysId]);
+    const IdSelecionados = DataDias.map((dia) => dia.id);
+    //console.log(IdSelecionados);
+    setFrequencia([...IdSelecionados]);
   }
 
   function EnviaHabito(event) {
@@ -80,8 +82,8 @@ function CriadorHabito(props) {
     promise.then((response) => {
       setHabito("");
       setFrequencia([]);
-      setSelectedDay(dias);
-      setHabitosUsuario([...habito]);
+      setDiaSelecionado(dias);
+      setHabitosUsuario([...habitosUsuario]);
       //setCarregando(false);
       buscaHabitos();
     });
@@ -106,7 +108,7 @@ function CriadorHabito(props) {
             placeholder="nome do hábito"
           ></input>
           <DivDias>
-            {selectedDay.map((dia) => {
+            {diaSelecionado.map((dia) => {
               const { id, name, isSelected } = dia;
               return (
                 <Dias
@@ -121,7 +123,7 @@ function CriadorHabito(props) {
           </DivDias>
           <Butoes>
             <Cancelar onClick={() => setEtapa(0)}>Cancelar</Cancelar>
-            <Salvar type="submit">Salvar</Salvar>
+            <Salvar type="submit" >Salvar</Salvar>
           </Butoes>
         </CriarHabito>
       </form>

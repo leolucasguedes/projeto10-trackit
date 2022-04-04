@@ -32,8 +32,27 @@ export const DivCima = styled.div`
   }
 `;
 
+export const SemHabito = styled.p`
+  font-size: 17.98px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 22.47px;
+  color: #bababa;
+  margin-left: 17px;
+`;
+
+export const HabitosFeitos = styled.p`
+  font-size: 17.98px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 22.47px;
+  color: #8FC549;
+  margin-left: 17px;
+`;
+
 export const DivTarefas = styled.div`
   width: 375px;
   height: 302px;
   margin-top: 25px;
 `;
+

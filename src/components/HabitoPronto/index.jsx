@@ -2,11 +2,12 @@ import axios from "axios";
 
 import styled from "styled-components";
 
-
 function HabitoPronto(props) {
-  const {buscaHabitos} = props;
+  const { buscaHabitos } = props;
   const { token } = props;
   const { name, days, id } = props;
+  //console.log(days);
+  //console.log(id);
   const diasARR = [
     { id: 0, name: "D" },
     { id: 1, name: "S" },
@@ -27,7 +28,7 @@ function HabitoPronto(props) {
     };
 
     const promise = axios.delete(
-      `https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit/habits/habits/${id}`,
+      `https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit/habits/${id}`,
       config
     );
     promise.then((response) => {
@@ -45,14 +46,15 @@ function HabitoPronto(props) {
         {diasARR.map((dia) => {
           const { id, name } = dia;
           return (
-            days.includes(id)?
+            days.includes(id) ? (
             <DiaSelecionado>
               <h1>{name}</h1>
-            </DiaSelecionado>:
+            </DiaSelecionado>
+          ) : (
             <Dias>
               <h1>{name}</h1>
             </Dias>
-          );
+          ));
         })}
       </DivDias>
     </HabitoCriado>
@@ -92,6 +94,7 @@ const DivCima = styled.div`
   ion-icon {
     width: 15px;
     height: 15px;
+    margin: 0px 10px;
   }
 `;
 
@@ -126,7 +129,7 @@ const Dias = styled.div`
 const DiaSelecionado = styled.div`
   width: 30px;
   height: 30px;
-  background-color: #CFCFCF;
+  background-color: #cfcfcf;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -135,7 +138,7 @@ const DiaSelecionado = styled.div`
   margin: 0px 4px;
 
   h1 {
-    color: #FFFFFF;
+    color: #ffffff;
     font-style: normal;
     font-weight: 400;
     font-size: 19.98px;

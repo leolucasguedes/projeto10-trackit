@@ -29,7 +29,9 @@ function App() {
   return (
     <UsuarioContext.Provider value={{ dataUsuario, setDataUsuario }}>
       <CarregandoContext.Provider value={{ carregando, setCarregando }}>
-        <HabitosUsuarioContext.Provider value={{ habitosUsuario, setHabitosUsuario }}>
+        <HabitosUsuarioContext.Provider
+          value={{ habitosUsuario, setHabitosUsuario }}
+        >
           <PorcentagemContext.Provider value={{ porcentagem, setPorcentagem }}>
             <BrowserRouter>
               <Routes>
