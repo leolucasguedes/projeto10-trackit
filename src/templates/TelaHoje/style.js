@@ -35,8 +35,5 @@ export const DivCima = styled.div`
 export const DivTarefas = styled.div`
   width: 375px;
   height: 302px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-top: 25px;
 `;

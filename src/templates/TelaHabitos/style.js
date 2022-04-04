@@ -57,3 +57,4 @@ export const DivTexto = styled.div`
     margin: 0px 15px;
   }
 `;
+

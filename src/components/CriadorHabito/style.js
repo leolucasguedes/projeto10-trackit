@@ -39,7 +39,7 @@ export const DivDias = styled.div`
 export const Dias = styled.div`
   width: 30px;
   height: 30px;
-  background-color: #ffffff;
+  background-color: ${ props => props.selected ? "#CFCFCF" : "#FFFFFF"};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,7 +48,7 @@ export const Dias = styled.div`
   margin: 0px 4px;
 
   h1 {
-    color: #dbdbdb;
+    color: ${ props => props.selected ? "#FFFFFF" : "#DBDBDB"};;
     font-style: normal;
     font-weight: 400;
     font-size: 19.98px;
@@ -95,38 +95,4 @@ export const Cancelar = styled.button`
   text-align: center;
   color: #52b6ff;
   margin: 0px 5px;
-`;
-
-export const HabitoCriado = styled.section`
-  width: 340px;
-  height: 91px;
-  background-color: #FFFFFF;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 5px 17px;
-`;
-
-export const DivCima = styled.div`
-  width: 340px;
-  height: 27px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  h1 {
-    color: #666666;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 19.98px;
-    line-height: 24.97px;
-    margin-left: 18px;
-    margin-bottom: 5px;
-  }
-
-  img{
-      width: 15px;
-      height: 15px;
-  }
 `;

@@ -43,13 +43,14 @@ export const Input = styled.input`
    width: 303px;
    height: 45px;
    padding-left: 11px;
+   background-color: ${props => props.disabled ? "#F2F2F2":"#FFFFFF"};
    border: 1px solid #D4D4D4;
    border-radius: 5px;
    margin-bottom: 6px; 
    font-size: 19.98px;
 
    &::placeholder {
-      color: #DBDBDB;
+      color: ${props => props.disabled ? "#AFAFAF":"#DBDBDB"}
       font-style: normal;
       font-weight: 400;
       font-size: 19.98px;
@@ -70,6 +71,7 @@ export const Entrar = styled.button`
    text-align: center;
    color: #FFFFFF;
    margin-left: 36px;
+   opacity:${props => props.disabled ? "0.5" : ""}; 
 `;
 
 

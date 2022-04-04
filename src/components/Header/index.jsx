@@ -1,12 +1,17 @@
+import { useContext } from 'react';
+import UsuarioContext from '../../context/UsuarioContext';
+
 import styled from "styled-components";
 
-import Imagem from "./../../assets/images/imagem.png"
+//import Imagem from "./../../assets/images/imagem.png"
 
 function Header() {
+  const { dataUsuario } = useContext(UsuarioContext);
+  const { image } = dataUsuario;
   return (
     <Topo>
       <h1>TrackIt</h1>
-      <img src={Imagem} alt="Imagem do perfil"/>
+      <img src={image} alt="Imagem do perfil"/>
     </Topo>
   );
 }
